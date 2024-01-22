@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon"> 
+  <title>Stacker by Igor Dinuzzi</title>
+
+  <!-- Stylesheet -->
+  <link href="../styles/stacker.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+  <body>
+    <header class="top-header">
+      <div class="logo-container">
+        <img src="../assets/logo/game-logo.svg" alt="Minesweeper game logo">
+      </div>
+      <div class="home-link-container">
+        <a href="../index.html" aria-label="Return to the homepage">Return to Homepage</a>
+      </div>
+    </header>
+    <div class="game-container">
+      <section class="game-panel">
+        <h1>Stacker</h1>
+        <div class="score">
+          <span class="score-counter" aria-label="Current game score">Score: 00000</span>
+        </div>
+      </section>
+
+      <main class="game-board">
+        <!-- This will stay empty in HTML - we will generate this in the JS file -->
+        <div class="grid" aria-label="Gameplay area"></div>
+
+        <!-- Placeholder for Game Over screen -->
+        <div class="end-game-screen hidden" aria-label="Game over screen">
+          <h2 class="end-game-text">Game<br />Over</h2>
+          <button class="btn play-again" aria-label="Play again button">Play Again</button>
+        </div>
+      </main>
+
+      <button class="btn btn-full stack" aria-label="Stack button">Stack</button>
+    </div>
+
+    <footer class="bottom-footer">
+      <a href="https://github.com/igordinuzzi" target="_blank" aria-label="Visit Igor's GitHub profile">
+          <i class="fa-brands fa-github"></i> Made by Igor
+      </a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script/stacker.js"></script>
+  </body>
+</html>
