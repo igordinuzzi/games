@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Merriweather&family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-color: #353c56; /* A soothing green */
+    --secondary-color: #F4A261; /* A warm, soft orange */
+    --accent-color: #2A9D8F; /* A vibrant teal */
+    --background-color: #fff48f;
+    --text-color: #353c56; /* A deep, dark blue */
+    --text-light: #E9ECEF; /* A very light gray, for text on dark backgrounds */
+    --border-color: #353c56; /* A bold, reddish-orange */
+    --hover-color: #161a23;
+    --gray-color: #bcbec0;
+    --light-blue-color: #9ab2f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  font-family: 'Darker Grotesque', sans-serif;
+  line-height: 1;
+  color: var(--border-color);
+  background-color: var(--background-color);
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+
+.top-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .logo-container img {
+	height: 50px; /* Adjust as needed */
+  }
+  
+  .home-link-container a {
+	color: var(--text-light);
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: var(--accent-color);
+	border-radius: 20px;
+	padding: 4px 20px 8px 20px;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+	display: inline-block; /* Align better with text and allow padding */
+	text-align: center; /* Ensure text is centered */
+  }
+  
+  .home-link-container a:hover, .home-link-container a:focus {
+	background-color: var(--secondary-color); /* Change background on hover/focus */
+	color: var(--text-color); /* Change text color on hover/focus */
+  }
+
+  .game-container {
+    width: calc((48px * 9) + 4px);
+    margin: auto; /* Center horizontally */
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+/* # Game Panel */
+
+/* change fonts */
+h1 {
+  font-size: 3em;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* # Game grid */
+
+.game-board {
+  border: 2px solid var(--border-color);
+  position: relative;
+}
+
+.grid {
+  width: calc(48px * 9); /* 👈 change multiplier based on grid row count */
+  height: calc(48px * 9); /*👈 change multiplier based on game column count */
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--text-light);
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  outline: 1px dashed var(--gray-color);
+  background-position: center;
+  background-size: contain;
+}
+
+.cell-dark {
+  background-color: var(--text-light);
+}
+
+.river {
+  outline: none;
+  background-color: var(--light-blue-color);
+}
+
+.road {
+  outline: none;
+  border-top: 1px dashed var(--text-light);
+  border-bottom: 1px dashed var(--text-light);
+  background-color: var(--gray-color);
+}
+
+.car {
+  background-image: url('../assets/ducker/car.png');
+}
+
+.bus {
+  background-image: url('../assets/ducker/bus.png');
+}
+
+.wood {
+  background-image: url('../assets/ducker/wood.png');
+}
+
+/* 
+This will work in a normal IDE / code editor but StackBlitz does not support GIF filetypes.
+See the 2 styles below for an alternative approach using animations.
+
+.duck {
+	background-image: url('./images/duck-walk.gif');
+}
+
+.river.duck {
+	background-image: url('./images/duck-walk.gif'), url('images/wood.png');
+}
+*/
+
+/* Alternative approach to animate the duck - for StackBlitz only */
+.duck {
+  animation: changeDuckImage 0.6s step-start infinite;
+}
+@keyframes changeDuckImage {
+  0% {
+    background-image: url('../assets/ducker/duck-walk/duck-walk-1.png');
+  }
+  25% {
+    background-image: url('../assets/ducker/duck-walk/duck-walk-2.png');
+  }
+  75% {
+    background-image: url('../assets/ducker/duck-walk/duck-walk-3.png');
+  }
+  100% {
+    background-image: url('../assets/ducker/duck-walk/duck-walk-4.png');
+  }
+}
+
+/* Alternative approach to animate the duck when on the river - for StackBlitz only */
+.river.duck {
+  animation: changeRiverDuckImage 0.6s step-start infinite;
+}
+@keyframes changeRiverDuckImage {
+  0% {
+    background-image: url('./images/duck-walk/duck-walk-1.png'),
+      url('./images/wood.png');
+  }
+  25% {
+    background-image: url('./images/duck-walk/duck-walk-2.png'),
+      url('./images/wood.png');
+  }
+  75% {
+    background-image: url('./images/duck-walk/duck-walk-3.png'),
+      url('./images/wood.png');
+  }
+  100% {
+    background-image: url('./images/duck-walk/duck-walk-4.png'),
+      url('./images/wood.png');
+  }
+}
+
+.time-up,
+.duck-arrived {
+  background-image: url('./images/duck-standing.png');
+}
+
+.duck-hit {
+  background-image: url('./images/duck-hit.png');
+}
+
+.duck-drowned {
+  background-image: url('./images/duck-drowned.png');
+}
+
+/* # Game over */
+
+.end-game-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(244, 162, 97, 0.5);
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+}
+
+.win {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+.end-game-text {
+  font-size: 48px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+/* # Utilities */
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  font-size: 2em;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight: bold;
+  padding: 4px 20px 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none; /* Add this line to remove the border */
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.bottom-footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+background-color: var(--primary-color);
+color: var(--text-light);
+z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.bottom-footer a {
+color: var(--text-light);
+text-decoration: none;
+font-weight: bold;
+}
+
+.bottom-footer a:hover {
+color: var(--secondary-color);
+}
+
+/* Font Awesome icons */
+.fa-brands {
+margin-right: 5px;
+}
