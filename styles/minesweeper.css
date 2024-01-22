@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Merriweather&family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-color: #353c56; /* A soothing green */
+    --secondary-color: #F4A261; /* A warm, soft orange */
+    --accent-color: #2A9D8F; /* A vibrant teal */
+    --background-color: #85f1f9;
+    --text-color: #353c56; /* A deep, dark blue */
+    --text-light: #E9ECEF; /* A very light gray, for text on dark backgrounds */
+    --border-color: #353c56; /* A bold, reddish-orange */
+    --hover-color: #161a23;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  font-family: 'Darker Grotesque', sans-serif;
+  line-height: 1;
+  color: rgb(0, 23, 50);
+  background-color: var(--background-color);
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.top-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .logo-container img {
+	height: 50px; /* Adjust as needed */
+  }
+  
+  .home-link-container a {
+	color: var(--text-light);
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: var(--accent-color);
+	border-radius: 20px;
+	padding: 4px 20px 8px 20px;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+	display: inline-block; /* Align better with text and allow padding */
+	text-align: center; /* Ensure text is centered */
+  }
+  
+  .home-link-container a:hover, .home-link-container a:focus {
+	background-color: var(--secondary-color); /* Change background on hover/focus */
+	color: var(--text-color); /* Change text color on hover/focus */
+  }
+  
+
+.game-container {
+    max-width: calc(480px + 4px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* change fonts */
+h1 {
+    font-size: 3em;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    border: 2px solid var(--border-color);
+    position: relative;
+}
+
+.grid {
+    height: calc((48px * 10) + 4px);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--text-light);
+}
+
+.cell {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    outline: 1px dashed var(--primary-color);
+}
+
+.cell-clicked {
+    background-color: var(--text-color);
+    cursor: not-allowed;
+}
+
+.cell-bomb {
+    background-color: var(--text-light);
+    background-image: url('../assets/minesweeper/bomb.png');
+    background-size: contain;
+    cursor: not-allowed;
+}
+
+.end-game-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(244, 162, 97, 0.5);
+	  align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+}
+
+.win {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.end-game-text {
+    font-size: 3em;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+}
+
+.btn {
+    font-size: 2em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bold;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none; /* Add this line to remove the border */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.bottom-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .bottom-footer a {
+	color: var(--text-light);
+	text-decoration: none;
+	font-weight: bold;
+  }
+  
+  .bottom-footer a:hover {
+	color: var(--secondary-color);
+  }
+  
+  /* Font Awesome icons */
+  .fa-brands {
+	margin-right: 5px;
+  }
+  
+  
+
+@media (max-width: 600px) {
+	.top-header {
+	  flex-direction: column;
+	  text-align: center;
+	  gap: 10px;
+	}
+  
+	.logo-container img {
+	  height: 40px; /* Smaller logo for smaller screens */
+	}
+  
+	.home-link-container a {
+	  font-size: 14px; /* Smaller font size for smaller screens */
+	}
+  }
+
+@media (max-width: 500px) {
+    .game-container {
+        width: 100%; /* Adjust for smaller screens */
+        padding: 0; /* Remove additional padding */
+    }
+
+    .btn {
+        padding: 8px 24px; /* Larger padding for better touch targets */
+    }
+}
+
+@media (max-width: 600px) {
+    .cell {
+        width: calc(100% / 10); /* Adjust cell size for smaller screens */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        padding-bottom: calc(100% / 10); /* Maintain aspect ratio */
+    }
+}
