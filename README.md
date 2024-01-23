@@ -4,6 +4,8 @@ Welcome to "Igor's Arcade," a meticulously crafted collection of games I've deve
 
 Live page [Visit Igor's Arcade Games](https://igordinuzzi.github.io/games/)
 
+![Mockup](doc/01-mockup.jpg)
+
 ### Homepage features
 
 The homepage for "Games by Igor Dinuzzi" is designed to offer a user-friendly and engaging experience. Here are its key functionalities:
@@ -11,29 +13,33 @@ The homepage for "Games by Igor Dinuzzi" is designed to offer a user-friendly an
 1. **Responsive Design:** Utilizes Bootstrap CSS to ensure the webpage is responsive across various devices, providing a seamless experience whether viewed on a desktop, tablet, or mobile phone.
 
 2. **Interactive Header:**
+   ![Nav](doc/02-nav.jpg)
    - **Logo Display:** Features a logo in the header for brand recognition.
    - **Navigation Links:** Includes direct links to the individual game pages ("Minesweeper," "Stacker," and "Ducker"), facilitating easy navigation and access to the games.
 
-3. **Introductory Section:**
+4. **Introductory Section:**
    - **Welcome Message:** Presents a welcoming title and paragraph using animate.css for engaging fadeIn effects, introducing users to Igor's Arcade and the variety of games available.
    - **Visual Appeal:** Enhanced by stylish CSS animations and a modern layout.
 
-4. **Games Display:**
+5. **Games Display:**
+   ![Games](doc/03-games.jpg)
    - **Individual Game Columns:** Each game (Minesweeper, Stacker, Ducker) is showcased in its own column with corresponding images and descriptions, engaging users with a visual and textual preview of each game.
    - **Play Buttons:** Offers "Play" buttons for each game, allowing users to easily access the game pages.
 
-5. **Footer with GitHub Link:**
+7. **Footer with GitHub Link:**
+   ![Footer](doc/04-footer.jpg)
    - **Social Media Integration:** Includes a link to Igor's GitHub profile, fostering community engagement and offering insights into the development process.
 
-6. **Animation and Interactivity:**
+9. **Animation and Interactivity:**
+    ![Animation](doc/05-animation.jpg)
    - Uses animate.css for smooth animations when displaying game columns.
    - Incorporates hover effects for an interactive user experience.
 
-7. **SEO and Accessibility:**
+11. **SEO and Accessibility:**
    - **Semantic HTML:** Ensures better search engine indexing and accessibility.
    - **Alt Tags for Images:** Enhances accessibility for users with screen readers.
 
-8. **JavaScript and Bootstrap Integration:**
+11. **JavaScript and Bootstrap Integration:**
    - **Dynamic Behavior:** JavaScript script for additional interactive features or game integrations.
    - **Bootstrap JavaScript:** Ensures responsive and interactive components like modals or collapsible menus work correctly.
 
@@ -41,9 +47,13 @@ This homepage serves as an inviting gateway into Igor's Arcade, offering a blend
 
 ### Minesweeper
 **Game Description:**
+![Minesweeper](doc/06-01-minesweeper.jpg)
 Minesweeper is a classic puzzle game where the objective is to clear a rectangular grid containing hidden "mines" without detonating any of them. The game is won by revealing all the cells on the grid that do not contain mines.
 
 **Functionalities:**
+![Minesweeper](doc/06-02-minesweeper.jpg)
+![Minesweeper](doc/06-03-minesweeper.jpg)
+![Minesweeper](doc/06-04-minesweeper.jpg)
 - **Grid Setup:** The game presents a grid of cells. Some cells contain hidden mines.
 - **Gameplay Mechanics:** Players click on cells to reveal what is underneath. A number on a cell indicates the number of mines in the adjacent cells.
 - **Bomb Detection:** Clicking on a cell with a bomb results in game over.
@@ -52,9 +62,13 @@ Minesweeper is a classic puzzle game where the objective is to clear a rectangul
 
 ### Stacker
 **Game Description:**
+![Stacker](doc/07-01-stacker.jpg)
 Stacker is an arcade game that challenges players to stack moving blocks on top of one another. The goal is to reach the top of the screen with a tower of blocks.
 
 **Functionalities:**
+![Stacker](doc/07-02-stacker.jpg)
+![Stacker](doc/07-03-stacker.jpg)
+![Stacker](doc/07-04-stacker.jpg)
 - **Moving Blocks:** Blocks move horizontally across the screen.
 - **Stacking Mechanic:** Players must time their clicks to stop and stack the blocks directly above the previous layer.
 - **Increasing Difficulty:** As players advance, the blocks move faster, increasing the difficulty of the game.
@@ -63,9 +77,13 @@ Stacker is an arcade game that challenges players to stack moving blocks on top 
 
 ### Ducker
 **Game Description:**
+![Ducker](doc/08-01-ducker.jpg)
 Ducker is an adventure arcade game where players navigate a duck character through various obstacles to reach a destination. The game requires agility and strategic planning.
 
 **Functionalities:**
+![Ducker](doc/08-02-ducker.jpg)
+![Ducker](doc/08-03-ducker.jpg)
+![Ducker](doc/08-04-ducker.jpg)
 - **Character Movement:** Players control the duck's movement, dodging obstacles and making strategic decisions.
 - **Dynamic Obstacles:** The game features moving obstacles such as cars and buses, adding complexity to the gameplay.
 - **Levels and Progression:** As players advance, the levels become more challenging with increasing obstacle speed and complexity.
