@@ -4,7 +4,7 @@ Welcome to "Igor's Arcade," a meticulously crafted collection of games I've deve
 
 Live page [Visit Igor's Arcade Games](https://igordinuzzi.github.io/games/)
 
-![Mockup](doc/01-mockup.jpg)
+![Mockup](doc/01-mockup.png)
 
 ### Homepage features
 
